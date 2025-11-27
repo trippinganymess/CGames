@@ -2,7 +2,6 @@ package madLibs;
 
 import java.util.Scanner;
 import java.util.Random;
-import madLibs.Helper;
 
 public class Main {
      public static void main(String args[]) {
@@ -21,10 +20,11 @@ public class Main {
             }
             System.out.println("Enter a noun : ");
             String noun = sc.next();
-            Helper.GetAdjectives(adjective, 3, sc);
-            Helper.GetVerbs(verb, 3, sc);
+            Validators v = new Validators();
+            Helper.GetAdjectives(adjective, 3, sc, v);
+            Helper.GetVerbs(verb, 3, sc, v);
             Helper.Loading(cnt);
-            random = ran.nextInt(0, 25);
+            random = ran.nextInt(25);
             Engine.runEngine(adjective, verb, noun, random);
             Helper.Loading(-1);
             cnt++;
