@@ -1,3 +1,4 @@
+/*  */
 package madLibs;
 
 import java.util.Scanner;
