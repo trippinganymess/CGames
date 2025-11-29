@@ -17,7 +17,7 @@ public class Validators {
                 System.out.println("No adjectives loaded (adjs.json missing or parse error).");
             }
             if (verb == null) {
-                System.out.println("No verbs loaded . {verbs.json missing}");
+                System.out.println("No verbs loaded (verbs.json missing or parse error).");
             }
         }
     }
